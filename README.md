@@ -1,6 +1,6 @@
 # MeliDataChallenge2020
 
-## ML Model for the Mercado Libre Data Challenge 2020
+## ML Model for Mercado Libre Data Challenge 2020
 
 This solution is called Efecto Bolo! and in honour of this lovely name, it was the first place of the [final leaderboard](https://ml-challenge.mercadolibre.com/final_results)!
 
