@@ -31,6 +31,19 @@ Submissions were evaluated using the average NDCG score of the top ten predicted
 The strategy used for this challenge has several parts:
 
 ### Implicit rating
+I started with an exploratory analysis, the highlight is that almost 30% of the targets are in its user's history. Another finding was that the latest items visited have more probability of purchase. ([notebook](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/00-ExploratoryAnalysis.ipynb))
+
+So a simple first model could be a function to score the viewed items in the user's session. The implicit rating function I proposed is:
+
+r_ui = sum(1 / log10(positon_in_history + 1)) 
+
+r_ui is the implicit rating of the user "u" over the item "i". The sum is over all pageviews of "i" in the user session "u". The position 1 is the latest pageview.
+
+So the implicit rating increases if the item has more pageviews, and also if these were more recently.
+
+This simple approach (filling the recommendation set with popular items from the domain of the highest scored item), has an NDCG metric of 0.2639, it means, in the top 20 positions of the competition. Nothing bad!
+
+The same approach, combined with a "Items to Item" collaborative filtering model strategy, had an NDCG score of 0.28755 (in top 10). This wasn't the final model strategy, but it's a good and lite one ([notebook](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/01-Item2itemModel.ipynb))
 
 ### Matrix Factorization
 
@@ -46,8 +59,8 @@ Finally, the last submission was a weighted ensemble of the implicit rating of t
 | Model                                 | Local score       | Public score  | Private score  |
 |---------------------------------------|-------------------|---------------|----------------|
 | [Baseline](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/00-ExploratoryAnalysis.ipynb) (sorted visited items)  | 0.2085            |               |                |
-| [Simple implicit rating](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/01-Item2itemModel.ipynb)               | 0.2639            |               |                |
-| [Items to items](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/01-Item2itemModel.ipynb)          | 0.2889            | 0.28755       |                |
+| [Simple implicit rating](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/01-Item2itemModel.ipynb)           | 0.2639            |               |                |
+| [Items to items](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/01-Item2itemModel.ipynb)    (first submission)       | 0.2889            | 0.28755       |                |
 | [ALS](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/02-AlternatingLeastSquaresModel.ipynb) Ensamble ([last submission](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/03-EnsembleModel.ipynb))        | 0.3180            | 0.31293       | 0.30920        |
 
 > https://ml-challenge.mercadolibre.com/final_results
