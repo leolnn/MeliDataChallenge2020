@@ -40,7 +40,7 @@ The strategy used for this challenge has several parts:
 |---------------------------------------|-------------------|---------------|----------------|
 | [Baseline](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/00-ExploratoryAnalysis.ipynb) (sorted visited items)  | 0.2085            |               |                |
 | [Simple Implicit rating](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/01-Item2itemModel.ipynb)               | 0.2639            |               |                |
-| [tems to items](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/01-Item2itemModel.ipynb)          | 0.2889            | 0.28755       |                |
+| [Items to items](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/01-Item2itemModel.ipynb)          | 0.2889            | 0.28755       |                |
 | [ALS](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/02-AlternatingLeastSquaresModel.ipynb) Ensamble ([Last Submission](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/03-EnsembleModel.ipynb))        | 0.3180            | 0.31293       | 0.30920        |
 
 > https://ml-challenge.mercadolibre.com/final_results
