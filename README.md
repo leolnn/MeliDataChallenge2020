@@ -35,7 +35,7 @@ I started with an exploratory analysis, the highlight is that almost 30% of the 
 
 So a simple first model could be a function to score the viewed items in the user's session. The implicit rating function I proposed is:
 
-r_ui = sum(1 / log10(positon_in_history + 1)) 
+``` r_ui = sum(1 / log10(positon_in_history + 1)) ```
 
 r_ui is the implicit rating of the user "u" over the item "i". The sum is over all pageviews of "i" in the user session "u". The position 1 is the latest pageview.
 
