@@ -43,7 +43,7 @@ So the implicit rating increases if the item has more pageviews, and also if the
 
 This simple approach (filling the recommendation set with popular items from the domain of the highest scored item), has an NDCG metric of 0.2639, it means, in the top 20 positions of the competition. Nothing bad!
 
-The same approach, combined with a "Items to Item" collaborative filtering model strategy, had an NDCG score of 0.28755 (in top 10). This wasn't the final model strategy, but it's a good and lite one ([notebook](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/01-Item2itemModel.ipynb))
+The same approach, combined with a "Items to Item" collaborative filtering model strategy, had an NDCG score of 0.28755 (in top 10 of the final leaderboard). This wasn't the final model strategy, but it's a good and lite one ([notebook](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/01-Item2itemModel.ipynb))
 
 ### Matrix Factorization
 
