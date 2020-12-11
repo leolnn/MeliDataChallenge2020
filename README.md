@@ -34,13 +34,20 @@ The strategy used for this challenge has several parts:
 
 ### Matrix Factorization
 
+[Alternating Least Squares](http://yifanhu.net/PUB/cf.pdf) (ALS) is a matrix factorization model, this model uses implicit ratings of user-items interactions, instead of explicit rating (like stars movies), or the binary representation commonly used in implicit interactions. So it's great for the implicit ratings already created.
+
+In addition to the items and users encoding in the model, I added features items and search terms in the user-item matrix representation, to enrich te semantic of the recommendations, especially for items with few pageviews (cold start problem), and to tend to recomend items of the same domain. ([notebook](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/02-AlternatingLeastSquaresModel.ipynb))
+
+Finally, the last submission was a weighted ensemble of the implicit rating of the items viewed in the user session, and the predicted scores of two models ALS with different settings. ([notebook](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/03-EnsembleModel.ipynb))
+
+
 ## Results
 
 | Model                                 | Local score       | Public score  | Private score  |
 |---------------------------------------|-------------------|---------------|----------------|
 | [Baseline](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/00-ExploratoryAnalysis.ipynb) (sorted visited items)  | 0.2085            |               |                |
-| [Simple Implicit rating](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/01-Item2itemModel.ipynb)               | 0.2639            |               |                |
+| [Simple implicit rating](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/01-Item2itemModel.ipynb)               | 0.2639            |               |                |
 | [Items to items](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/01-Item2itemModel.ipynb)          | 0.2889            | 0.28755       |                |
-| [ALS](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/02-AlternatingLeastSquaresModel.ipynb) Ensamble ([Last Submission](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/03-EnsembleModel.ipynb))        | 0.3180            | 0.31293       | 0.30920        |
+| [ALS](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/02-AlternatingLeastSquaresModel.ipynb) Ensamble (last submission](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/03-EnsembleModel.ipynb))        | 0.3180            | 0.31293       | 0.30920        |
 
 > https://ml-challenge.mercadolibre.com/final_results
