@@ -48,6 +48,6 @@ Finally, the last submission was a weighted ensemble of the implicit rating of t
 | [Baseline](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/00-ExploratoryAnalysis.ipynb) (sorted visited items)  | 0.2085            |               |                |
 | [Simple implicit rating](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/01-Item2itemModel.ipynb)               | 0.2639            |               |                |
 | [Items to items](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/01-Item2itemModel.ipynb)          | 0.2889            | 0.28755       |                |
-| [ALS](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/02-AlternatingLeastSquaresModel.ipynb) Ensamble (last submission](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/03-EnsembleModel.ipynb))        | 0.3180            | 0.31293       | 0.30920        |
+| [ALS](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/02-AlternatingLeastSquaresModel.ipynb) Ensamble ([last submission](https://github.com/leolnn/MeliDataChallenge2020/blob/main/notebooks/03-EnsembleModel.ipynb))        | 0.3180            | 0.31293       | 0.30920        |
 
 > https://ml-challenge.mercadolibre.com/final_results
